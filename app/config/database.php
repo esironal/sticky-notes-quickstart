@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => $_ENV['OPENSHIFT_MYSQL_DB_HOST'].':'.$_ENV['OPENSHIFT_MYSQL_DB_PORT'],
-			'database'  => 'stickynotes',
+			'database'  => $_ENV['OPENSHIFT_GEAR_NAME'],
 			'username'  => $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'],
 			'password'  => $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'],
 			'charset'   => 'utf8',
