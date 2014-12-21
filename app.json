@@ -1,0 +1,14 @@
+{
+	"name": "Sticky Notes",
+	"description": "A pastebin application",
+	"keywords": [
+		"php",
+		"pastebin",
+		"stickynotes"
+	],
+	"website": "http://sayakb.github.io/sticky-notes/pages/home/",
+	"logo": "",
+	"addons": [
+		"heroku-postgresql:hobby-dev"
+	]
+}
