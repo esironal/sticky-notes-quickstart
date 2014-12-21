@@ -1,4 +1,22 @@
 <?php
+
+$default_database = 'mysql';
+ 
+if (isset($_ENV['OPENSHIFT_POSTGRESQL_DB_URL'])) {
+    $pgsql_host = $_ENV['OPENSHIFT_POSTGRESQL_DB_HOST'].':'.$_ENV['OPENSHIFT_POSTGRESQL_DB_PORT'];
+    $pgsql_database = $_ENV['OPENSHIFT_GEAR_NAME'];
+    $pgsql_username = $_ENV['OPENSHIFT_POSTGRESQL_DB_USERNAME'];
+    $pgsql_password = $_ENV['OPENSHIFT_POSTGRESQL_DB_PASSWORD'];
+    $default_database = 'pgsql';
+} elseif (isset($_ENV['DATABASE_URL'])) {
+    preg_match('/^postgres:\/\/(?P<username>\w+):(?P<password>\w+)@(?P<hostname>\S+):(?P<port>\d+)\/(?P<database>\w+)$/', $_ENV['DATABASE_URL'], $dbparts);
+    $pgsql_host = $dbparts['hostname'].':'.$dbparts['port'];
+    $pgsql_database = $dbparts['database'];
+    $pgsql_username = $dbparts['username'];
+    $pgsql_password = $dbparts['password'];
+    $default_database = 'pgsql';
+}
+
 return array(
 
 	/*
@@ -25,7 +43,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => isset($default_database) ? $default_database : 'mysql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -64,10 +82,10 @@ return array(
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',
-			'host'     => 'localhost',
-			'database' => 'database',
-			'username' => 'root',
-			'password' => '',
+			'host'     => isset($pgsql_host) ? $pgsql_host : 'localhost',
+			'database' => isset($pgsql_database) ? $pgsql_database : 'database',
+			'username' => isset($pgsql_username) ? $pgsql_username : 'root',
+			'password' => isset($pgsql_password) ? $pgsql_password : '',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
