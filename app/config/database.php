@@ -9,7 +9,7 @@ if (isset($_ENV['OPENSHIFT_POSTGRESQL_DB_URL'])) {
 	$pgsql_password = $_ENV['OPENSHIFT_POSTGRESQL_DB_PASSWORD'];
 	$default_database = 'pgsql';
 } elseif (isset($_ENV['DATABASE_URL'])) {
-	preg_match('/^postgres:\/\/(?P<username>\w+):(?P<password>\w+)@(?P<hostname>\S+):(?P<port>\d+)\/(?P<database>\w+)$/', $_ENV('DATABASE_URL'), $dbparts);
+	preg_match('/^postgres:\/\/(?P<username>\w+):(?P<password>\w+)@(?P<hostname>\S+):(?P<port>\d+)\/(?P<database>\w+)$/', $_ENV['DATABASE_URL'], $dbparts);
 	$pgsql_host = $dbparts['hostname'].':'.$dbparts['port'];
 	$pgsql_database = $dbparts['database'];
 	$pgsql_username = $dbparts['username'];
