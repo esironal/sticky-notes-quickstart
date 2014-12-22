@@ -9,9 +9,13 @@ License: [BSD 2-clause license](http://www.opensource.org/licenses/bsd-license.p
 
 ## Heroku
 
-Click here
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/pcon/sticky-notes-quickstart)
+1. Create an account at [http://www.heroku.com](http://www.heroku.com)
+2. Click here [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/pcon/sticky-notes-quickstart)
+3. Click the "View it" link after the app is deployed
+4. Click "Test connection" to verify the database connection
+5. Click "Start installation" to install the database schema
+6. Remember the credentials on this page and click "Proceed to login"
+7. Login with the credentials from step 6
 
 ## Openshift
 
