@@ -1,16 +1,22 @@
 <?php
 
-$default_database = 'mysql';
- 
-if (isset($_ENV['OPENSHIFT_POSTGRESQL_DB_URL'])) {
-    $pgsql_host = $_ENV['OPENSHIFT_POSTGRESQL_DB_HOST'].':'.$_ENV['OPENSHIFT_POSTGRESQL_DB_PORT'];
+if (isset($_ENV['OPENSHIFT_MYSQL_DB_HOST'])) {
+	$mysql_host = $_ENV['OPENSHIFT_MYSQL_DB_HOST'].':'.$_ENV['OPENSHIFT_MYSQL_DB_PORT'];
+	$mysql_database = $_ENV['OPENSHIFT_GEAR_NAME'];
+	$mysql_username = $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'];
+	$mysql_password = $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'];
+	$default_database = 'mysql';
+} elseif (isset($_ENV['OPENSHIFT_POSTGRESQL_DB_URL'])) {
+    $pgsql_hostname = $_ENV['OPENSHIFT_POSTGRESQL_DB_HOST'];
+    $pgsql_port = $_ENV['OPENSHIFT_POSTGRESQL_DB_PORT'];
     $pgsql_database = $_ENV['OPENSHIFT_GEAR_NAME'];
     $pgsql_username = $_ENV['OPENSHIFT_POSTGRESQL_DB_USERNAME'];
     $pgsql_password = $_ENV['OPENSHIFT_POSTGRESQL_DB_PASSWORD'];
     $default_database = 'pgsql';
 } elseif (isset($_ENV['DATABASE_URL'])) {
     preg_match('/^postgres:\/\/(?P<username>\w+):(?P<password>\w+)@(?P<hostname>\S+):(?P<port>\d+)\/(?P<database>\w+)$/', $_ENV['DATABASE_URL'], $dbparts);
-    $pgsql_host = $dbparts['hostname'].':'.$dbparts['port'];
+    $pgsql_hostname = $dbparts['hostname'];
+    $pgsql_port = $dbparts['port'];
     $pgsql_database = $dbparts['database'];
     $pgsql_username = $dbparts['username'];
     $pgsql_password = $dbparts['password'];
@@ -43,7 +49,7 @@ return array(
 	|
 	*/
 
-	'default' => isset($default_database) ? $default_database : 'mysql',
+	'default' => isset($default_database) ? $default_database : 'sqlite',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -71,10 +77,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => $_ENV['OPENSHIFT_MYSQL_DB_HOST'].':'.$_ENV['OPENSHIFT_MYSQL_DB_PORT'],
-			'database'  => $_ENV['OPENSHIFT_GEAR_NAME'],
-			'username'  => $_ENV['OPENSHIFT_MYSQL_DB_USERNAME'],
-			'password'  => $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD'],
+			'host'      => isset($mysql_host) ? $mysql_host : 'localhost',
+			'database'  => isset($mysql_database) ? $mysql_database : 'database',
+			'username'  => isset($mysql_username) ? $mysql_username : 'root',
+			'password'  => isset($mysql_password) ? $mysql_password : '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
@@ -82,7 +88,8 @@ return array(
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',
-			'host'     => isset($pgsql_host) ? $pgsql_host : 'localhost',
+			'host'     => isset($pgsql_hostname) ? $pgsql_hostname : 'localhost',
+			'port'     => isset($pgsql_port) ? $pgsql_port : '5432',
 			'database' => isset($pgsql_database) ? $pgsql_database : 'database',
 			'username' => isset($pgsql_username) ? $pgsql_username : 'root',
 			'password' => isset($pgsql_password) ? $pgsql_password : '',

@@ -7,7 +7,7 @@
 		"stickynotes"
 	],
 	"website": "http://sayakb.github.io/sticky-notes/pages/home/",
-	"logo": "",
+	"logo": "https://raw.githubusercontent.com/pcon/sticky-notes-quickstart/master/public/icon.png",
 	"addons": [
 		"heroku-postgresql:hobby-dev"
 	]
