@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="42.066865"
-     inkscape:cy="-6.6652749"
+     inkscape:zoom="2"
+     inkscape:cx="-4.6786389"
+     inkscape:cy="165.13663"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -46,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,7 +56,7 @@
      id="layer1"
      transform="translate(0,-1020.3622)">
     <rect
-       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#999999;stroke-width:0.98125695999999996;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;stroke-opacity:1"
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.98125695999999996;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;stroke-opacity:1"
        id="rect3162"
        width="146.01875"
        height="31.018744"
@@ -66,7 +66,7 @@
        ry="4.8466787" />
     <g
        id="g3153"
-       transform="matrix(0.65703833,0,0,0.65703833,9.4700332,357.55692)">
+       transform="matrix(0.53344854,0,0,0.53344854,12.158237,485.2411)">
       <g
          transform="matrix(0.31030645,0,0,0.31030645,-11.972778,1006.7419)"
          id="g3069">
@@ -104,7 +104,7 @@
     </g>
     <g
        id="g3083"
-       transform="matrix(0.55979248,0,0,0.55979248,28.724967,940.3391)"
+       transform="matrix(0.48299082,0,0,0.48299082,37.125456,953.37908)"
        style="fill:#ffffff">
       <g
          id="g3085"
@@ -122,7 +122,7 @@
       </g>
       <polygon
          style="fill:#ffffff"
-         points="85.699,192.484 71.066,192.484 71.066,172.041 85.262,172.041 85.262,176.041 75.155,176.041 75.155,179.574 81.025,179.574 81.025,183.547 75.155,183.547 75.155,188.482 85.699,188.482 "
+         points="85.262,172.041 85.262,176.041 75.155,176.041 75.155,179.574 81.025,179.574 81.025,183.547 75.155,183.547 75.155,188.482 85.699,188.482 85.699,192.484 71.066,192.484 71.066,172.041 "
          id="polygon3091" />
       <g
          id="g3093"
@@ -140,7 +140,7 @@
       </g>
       <polygon
          style="fill:#ffffff"
-         points="145.969,192.484 143.69,192.484 143.69,182.846 133.526,182.846 133.526,192.484 131.248,192.484 131.248,172.041 133.526,172.041 133.526,180.773 143.69,180.773 143.69,172.041 145.969,172.041 "
+         points="133.526,182.846 133.526,192.484 131.248,192.484 131.248,172.041 133.526,172.041 133.526,180.773 143.69,180.773 143.69,172.041 145.969,172.041 145.969,192.484 143.69,192.484 143.69,182.846 "
          id="polygon3099" />
       <rect
          style="fill:#ffffff"
@@ -151,23 +151,23 @@
          id="rect3101" />
       <polygon
          style="fill:#ffffff"
-         points="167.859,182.963 162.252,182.963 162.252,192.484 159.975,192.484 159.975,172.041 171.979,172.041 171.979,174.111 162.252,174.111 162.252,180.889 167.859,180.889 "
+         points="159.975,192.484 159.975,172.041 171.979,172.041 171.979,174.111 162.252,174.111 162.252,180.889 167.859,180.889 167.859,182.963 162.252,182.963 162.252,192.484 "
          id="polygon3103" />
       <polygon
          style="fill:#ffffff"
-         points="190.379,172.039 176.066,172.039 176.066,174.113 182.083,174.113 182.083,192.484 184.361,192.484 184.361,174.113 190.379,174.113 "
+         points="182.083,174.113 182.083,192.484 184.361,192.484 184.361,174.113 190.379,174.113 190.379,172.039 176.066,172.039 176.066,174.113 "
          id="polygon3105" />
     </g>
     <text
        xml:space="preserve"
-       style="font-size:12.60974693px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
-       x="61.440964"
-       y="1031.6372"
+       style="font-size:10.87973118px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans"
+       x="89.739357"
+       y="1032.1514"
        id="text3164"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3166"
-         x="61.440964"
-         y="1031.6372">Deploy on</tspan></text>
+         x="89.739357"
+         y="1032.1514">Deploy to</tspan></text>
   </g>
 </svg>
