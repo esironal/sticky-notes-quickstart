@@ -1,5 +1,7 @@
 # [Sticky Notes v1.9](http://sayakbanerjee.com/sticky-notes)
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/pcon/sticky-notes-quickstart/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![BSD](https://img.shields.io/badge/license-BSD-blue.svg?style=flat)](https://github.com/pcon/sticky-notes-quickstart/blob/master/LICENSE)
+
 Sticky notes is a powerful open-source pastebin application. [See it in action](http://paste.kde.org).
 
 License: [BSD 2-clause license](http://www.opensource.org/licenses/bsd-license.php).
